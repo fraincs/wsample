@@ -2,6 +2,8 @@
 
 Intégrer, la maquette, en se souciant de la réutilisation du code.
 
+Cloner le repos, > parcel index.html
+
 COMPORTEMENT: 
 Lorsque nous cliquons Search devra être logger dans la console les termes qui ont été rechercher (what - where) exemple si le user écrit ski et à Kyoto devra être écrit (ski - Kyoto) dans la console. De plus, le bouton search devra afficher Thanks! au lieu de search une fois cliqué, si les deux champs sont remplis.
 
