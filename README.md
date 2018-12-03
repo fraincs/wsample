@@ -3,6 +3,7 @@
 Intégrer, la maquette, en se souciant de la réutilisation du code.
 
 Cloner le repos
+
 parcel index.html
 
 COMPORTEMENT: 
