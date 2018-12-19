@@ -1,0 +1,148 @@
+@import url("https://meyerweb.com/eric/tools/css/reset/reset.css");
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    overflow: auto;
+    height: 100%;
+    letter-spacing: 0px;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* -------------------------------------------- */
+                /* HEADER CONTENT */
+/* -------------------------------------------- */
+
+.header {
+    display: block;
+
+}
+
+.header-container {
+    background: url("assets/japan.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 962px;
+    z-index: 10;
+    padding-left: 190px;
+    padding-right: 169px;
+    padding-top: 41px;
+}
+
+.header-container::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(0,0,0,0.4);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 962px;
+    z-index: 20;
+}
+
+/* -------------------------------------------- */
+                /* MENU */
+/* -------------------------------------------- */
+
+.nav-menu {
+    position: relative;
+    display: block;
+    z-index: 30;
+    color: #FFFFFF;
+
+}
+
+.top-menu {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-end;
+
+}
+
+.menu-items {
+    /* margin-right: 41px; */
+    margin-left: 82px;
+}
+
+.logo-menu {
+    left: 0;
+    margin-right: auto;
+}
+
+.head-content {
+    position: relative;
+    z-index: 30;
+    color: #FFFFFF;
+    padding-top: 106px;
+    padding-right: 40%;
+}
+
+.super-title {
+    font-size: 50px;
+    color: #FFFFFF;
+    line-height: 60px;
+    padding-bottom: 32px;
+}
+
+.paragraph-style-white {
+    font-size: 16px;
+    color: #FFFFFF;
+    line-height: 24px;
+}
+
+/* -------------- CTA -------------- */
+
+    .form-field {
+        margin-right: 41px;  /*le margin est reduit de 20px pour compenser le translate additionel de 20px, pour un total de 61px entre les field*/
+        width: 297px;
+        height: 49px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid #D8D8D8; /*Ici la couleur du border est tres subtile et proche du blanc, est-ce qu'on voudrait accentuer la difference de couleur?*/
+        transform: translate(-20px);  
+        color: #FFFFFF;
+
+    }
+
+    .form-field::placeholder {
+        color: #FFFFFF;
+        padding-left: 43px;
+    }
+
+    .circle:before {
+        content: '\25E6';
+        color: #D8D8D8;
+        font-weight: 600;
+        font-size: 40px;
+        /* transform: translate(30px);   */
+}
+
+    .search-elements {
+        position: relative;
+        z-index: 30;
+        padding-top: 64px;
+    }
+
+    .blue-cta {
+        height: 58px;
+        width: 171px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        background-color: #1B7DFF;
+        border: none;
+        font-size: 24px;
+        font-weight: 600;
+    }
+    .blue-cta:hover {
+        background-color: rgb(32, 112, 216);
+    }
