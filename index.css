@@ -10,6 +10,7 @@ body {
     line-height: 24px;
     padding: 0;
     margin: 0;
+    -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -24,6 +25,11 @@ a {
 button:focus,
 input:focus {
     outline: none;
+}
+
+.flexing-flex {
+    display: flex;
+    justify-content: space-between;
 }
 
 /* -------------------------------------------- */
@@ -68,7 +74,7 @@ input:focus {
     position: relative;
     display: block;
     z-index: 30;
-    color: #FFFFFF;
+    color: #fff;
 }
 
 .top-menu {
@@ -91,22 +97,21 @@ input:focus {
 .head-content {
     position: relative;
     z-index: 30;
-    color: #FFFFFF;
+    color: #fff;
     padding-top: 189px;
     padding-right: 40%;
 }
 
 .super-title {
     font-size: 50px;
-    color: #FFFFFF;
+    color: #fff;
     line-height: 60px;
     padding-bottom: 32px;
 }
 
 .paragraph-style-white {
     font-size: 16px;
-    font-weight: 300; /*Here i reduced the font-weight because eben with a normal 400, it seemed too bold compared to the .sketch file.*/
-    color: #FFFFFF;
+    color: #fff;
 }
 
 /* -------------- FORM -------------- */
@@ -123,12 +128,12 @@ input:focus {
         border: none;
         border-bottom: 2px solid #D8D8D8; /*Ici la couleur du border est tres subtile et proche du blanc, est-ce qu'on voudrait accentuer la difference de couleur?*/
         transform: translate(-20px, -6px);  
-        color: #FFFFFF;
+        color: #fff;
         padding-left: 20px;
     }
 
     .form-field::placeholder {
-        color: #FFFFFF;
+        color: #fff;
     }
 
     .form-field:focus {
@@ -152,7 +157,7 @@ input:focus {
         height: 58px;
         width: 171px;
         text-transform: uppercase;
-        color: #FFFFFF;
+        color: #fff;
         background-color: #1B7DFF;
         border: none;
         font-size: 24px;
@@ -176,7 +181,7 @@ input:focus {
     margin-left: 89px;
     box-shadow: 3px 3px 40px 10px #1027460f;
     height: auto;
-    background-color: #FFFFFF;
+    background-color: #fff;
     z-index: 70;
 }
 
@@ -250,14 +255,10 @@ input:focus {
 }
 
 .inspiration-subsection {
-    display: flex;
-    justify-content: space-between;
     align-content: flex-end;
     margin-bottom: 36px;
 }
 .inspiration-subsection blue-line {
-    display: flex;
-    justify-content: space-between;
     align-content: flex-end;
 }
 
@@ -278,8 +279,6 @@ input:focus {
 }
 
 .photo-frame-first-line {
-    display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
 }
 
@@ -303,8 +302,6 @@ input:focus {
     background-blend-mode: multiply;
     z-index: 50;
     position: absolute;
-    height: auto;
-    width: auto;
 }
 
 .photo-row-content {
@@ -312,14 +309,12 @@ input:focus {
     position: absolute;
     bottom: 28px;
     margin-left: 32px;
-    color: #FFFFFF;
+    color: #fff;
     font-size: 50px;
     font-weight: 600;
 }
 
 .photo-frame-second-line {
-    display: flex;
-    justify-content: space-between;
     margin-top: 10px;
     flex-wrap: wrap;
 }
@@ -339,8 +334,6 @@ input:focus {
     background-blend-mode: multiply;
     z-index: 50;
     position: absolute;
-    height: auto;
-    width: auto;
 }
 
 .photo-row2 {
@@ -439,9 +432,7 @@ input:focus {
             position: relative;
             bottom: 40px;
             margin-left: 27px;
-            color: #FFFFFF;
-            display: flex;
-            justify-content: space-between;
+            color: #fff;
         }
 
         .social-items {
@@ -468,7 +459,7 @@ input:focus {
             width: 118px;
             height: 42px;
             text-transform: uppercase;
-            color: #FFFFFF;
+            color: #fff;
             background-color: #1B7DFF;
             border: none;
             font-size: 16px;
@@ -519,7 +510,7 @@ input:focus {
 
 .footer {
     background-color: #102746;
-    color: #FFFFFF;
+    color: #fff;
     list-style: none;
 }
 
