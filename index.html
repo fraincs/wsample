@@ -1,8 +1,9 @@
 <html>
 
-<head>    <meta charset="utf-8" />
+<head>    
+    <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Odijo</title>
+    <title>Odigo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
     <link rel="stylesheet" href="./index.css">
@@ -13,9 +14,9 @@
             <nav class="nav-menu">
                 <ul class="top-menu">
                     <img class="logo-menu" src="/assets/odigo.svg" alt="logo">
-                    <li class="menu-items"><a href="#">Articles</a></li>
-                    <li class="menu-items"><a href="#">Locations</a></li>
-                    <li class="menu-items"><a href="#">Videos</a></li>
+                    <li class="menu-items"><a href="#articles">Articles</a></li>
+                    <li class="menu-items"><a href="#locations">Locations</a></li>
+                    <li class="menu-items"><a href="#video">Videos</a></li>
                     <li class="menu-items"><a href="#">Sign In</a></li>
                 </ul>
             </nav>
@@ -24,10 +25,13 @@
                 <p class="paragraph-style-white">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this if i had the energy but under the bed, for attack the child, open the door, </p>
             </div>
             <div class="search-elements">
-                <span class="circle"></span><input type="search" class="what form-field" name="name" placeholder="What would you like to do?">  
-                <span class="circle"></span><input type="search" class="where form-field" name="name" placeholder="Where would you like to go?">
-                <button class="blue-cta">search</button>
-                <!-- onclick="fonction" -->
+                <div class="input-wrapper">
+                    <input type="search" class="what form-field" name="name" placeholder="What would you like to do?">  
+                </div>
+                <div class="input-wrapper">
+                    <input type="search" class="where form-field" name="name" placeholder="Where would you like to go?">
+                </div>
+                <button id="special-button" class="blue-cta">search</button>
             </div>
         </div>
     </div>
@@ -41,7 +45,7 @@
                     <img class="benefits-icons" src="/assets/welcome.png">
                     <div class="single-benefit-content">
                         <p class="single-benefit-content-subtitle">Welcome to Odigo!</p>
-                        <p class="single-benefit-content-subtitle-content">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over.</p>
+                        <p class="generic-content benefit-content-container">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over.</p>
                         <button class="white-cta"><a href="#">Learn more<img src="/assets/arrow-right.svg"></a></button>
                     </div>
                 </div>
@@ -49,7 +53,7 @@
                     <img class="benefits-icons" src="/assets/support.png">
                     <div class="single-benefit-content">
                         <p class="single-benefit-content-subtitle">Your Personal Japan Guide</p>
-                        <p class="single-benefit-content-subtitle-content">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over.</p>
+                        <p class="generic-content benefit-content-container">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over.</p>
                         <button class="white-cta"><a href="#">Learn more<img src="/assets/arrow-right.svg"></a></button>
                     </div>
                 </div>
@@ -57,7 +61,7 @@
                     <img class="benefits-icons" src="/assets/local.png">
                     <div class="single-benefit-content">
                         <p class="single-benefit-content-subtitle">Promoting Local Businesses</p>
-                        <p class="single-benefit-content-subtitle-content">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over.</p>
+                        <p class="generic-content  benefit-content-container">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over.</p>
                         <button class="white-cta"><a href="#">Learn more<img src="/assets/arrow-right.svg"></a></button>
                     </div>
                 </div>
@@ -65,32 +69,248 @@
         </div>
     </div>
     <div class="inspiration-section translate">
-        <div class="inspiration-subsection blue-line">
-            <h2 class="subtitle">Get inspired for your next trip</h2>
+        <div class="inspiration-subsection blue-line flexing-flex">
+            <h2 class="subtitle" id="articles">Get inspired for your next trip</h2>
             <button class="white-cta"><a href="#">view all<img src="/assets/arrow-right.svg"></a></button>
         </div>
         <div class="photo-frame">
-            <div class="photo-frame-first-line">
+            <div class="photo-frame-first-line flexing-flex">
                 <div class="photo-row-line-one">
-                    <img class="photo-row" src="assets/mount.png" alt="picture of Mount Fuji">
+                    <img class="photo-row" src="assets/fuji.png" alt="Mount Fuji">
+                    <p class="photo-row-content">Mount Fuji</p>
                 </div>
                 <div class="photo-row-line-one">
-                    <img class="photo-row" src="assets/kyoto-small.png" alt="picture of two ladies in kimono walking in a street in Kyoto">
+                    <img class="photo-row" src="assets/kyoto-small.png" alt="two ladies in kimono walking in a street in Kyoto">
+                    <p class="photo-row-content">Kyoto</p>
                 </div>
             </div>
-            <div class="photo-frame-second-line">
+            <div class="photo-frame-second-line flexing-flex">
                 <div class="photo-row-line-two">
-                    <img class="photo-row" src="assets/kyoto-downtown.png" alt="picture of downtown Tokyo">
+                    <img class="photo-row photo-row2" src="assets/kyoto-downtown.png" alt="downtown Tokyo">
+                    <p class="photo-row-content">Tokyo</p>
                 </div>
                 <div class="photo-row-line-two">
-                    <img class="photo-row" src="assets/niigata.png" alt="picture of a shrine in niigata">
+                    <img class="photo-row2" src="assets/niigata.png" alt="shrine in niigata">
+                    <p class="photo-row-content">Niigata</p>
                 </div>
                 <div class="photo-row-line-two">
-                    <img class="photo-row" src="assets/sapporo.png" alt="picture of a group of people walking in Sapporo">
+                    <img class="photo-row2" src="assets/sapporo.png" alt="group of people walking in Sapporo">
+                    <p class="photo-row-content">Sapporo</p>
                 </div>
-            
             </div>
         </div>
+        <div class="location-description-container">
+            <div class="location-description">
+                <div class="photo-location">
+                    <img src="/assets/tottori.png" alt="at tottori, a man standing in front of a temple">
+                </div>
+                <div class="location-content">
+                    <h3 class="subheader-location">Prefecture in Focus:<br>Tottori</h3>
+                    <div class="generic-content blog-content-container">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this if i had the energy but under the bed, for attack the child, open the door</div>
+                    <button class="white-cta"><a href="#">View Prefecture<img src="/assets/arrow-right.svg"></a></button>
+                </div>
+            </div>
+            <div class="location-description">
+                <div class="photo-location second-photo">
+                    <img src="/assets/kyoto.png" alt="Fushimi Inari-taisha temple">
+                </div>
+                <div class="location-content second-content">
+                    <h3 class="subheader-location">Featured Neighborhood:<br>Kyoto's Arashiyama</h3>
+                    <div class="generic-content blog-content-container">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this if i had the energy but under the bed, for attack the child, open the door</div>
+                    <button class="white-cta"><a href="#">View Neighborhood<img src="/assets/arrow-right.svg"></a></button>
+                </div>
+            </div>
+        </div>
+        <div class="places-visit">
+            <div class="inspiration-subsection blue-line flexing-flex">
+                <h3 class="sub-subtitle" id="locations">Today top places to visit</h2>
+            </div>
+            <div class="picture-location-description-column">
+                <div class="picture-location-table">
+                    <div class="picture-location-description">
+                        <div class="picture-location-social">
+                            <div class="social-bar">
+                                <div class="social-bar-image">
+                                    <img src="/assets/communism.png" alt="crowd gathered in Nagoya"> 
+                                    <div class="social-content flexing-flex">
+                                        <div class="city-social">
+                                            <p>Nagoya</p>
+                                        </div>
+                                        <div class="social-items flexing-flex">
+                                            <p class="likes">221</p>
+                                            <img src="/assets/hearth.svg" alt="heart">
+                                            <p class="comments">50</p>
+                                            <img src="/assets/comments.svg" alt="comments">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-social">
+                            <p class="generic-content places-visit-content">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this.</p>
+                            <button class="tiny-blue-cta">see more</button>
+                        </div>
+                    </div>
+                    <div class="picture-location-description special-margin">
+                        <div class="picture-location-social">
+                            <div class="social-bar">
+                                <div class="social-bar-image">
+                                    <img src="/assets/niigada.png" alt="houses covered in snow in Niigata"> 
+                                    <div class="social-content flexing-flex">
+                                        <div class="city-social">
+                                            <p>Niigata</p>
+                                        </div>
+                                        <div class="social-items flexing-flex">
+                                            <p class="likes">221</p>
+                                            <img src="/assets/hearth.svg" alt="heart">
+                                            <p class="comments">50</p>
+                                            <img src="/assets/comments.svg" alt="comments">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-social">
+                            <p class="generic-content places-visit-content">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this.</p>
+                            <button class="tiny-blue-cta">see more</button>
+                        </div>
+                    </div>
+                    <div class="picture-location-description">
+                        <div class="picture-location-social">
+                            <div class="social-bar">
+                                <div class="social-bar-image">
+                                    <img src="/assets/osaka.png" alt="street view in Osaka"> 
+                                    <div class="social-content flexing-flex">
+                                        <div class="city-social">
+                                            <p>Osaka</p>
+                                        </div>
+                                        <div class="social-items flexing-flex">
+                                            <p class="likes">221</p>
+                                            <img src="/assets/hearth.svg" alt="heart">
+                                            <p class="comments">50</p>
+                                            <img src="/assets/comments.svg" alt="comments">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-social">
+                                <p class="generic-content places-visit-content">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this.</p>
+                                <button class="tiny-blue-cta">see more</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="picture-location-table">
+                    <div class="picture-location-description">
+                        <div class="picture-location-social">
+                            <div class="social-bar">
+                                <div class="social-bar-image">
+                                    <img src="/assets/lantern.png" alt="a lantern hanging in a shrine in Saitama"> 
+                                    <div class="social-content flexing-flex">
+                                        <div class="city-social">
+                                            <p>Saitama</p>
+                                        </div>
+                                        <div class="social-items flexing-flex">
+                                            <p class="likes">221</p>
+                                            <img src="/assets/hearth.svg" alt="heart">
+                                            <p class="comments">50</p>
+                                            <img src="/assets/comments.svg" alt="comments">
+                                        </div>
+                                    </div>
+                                </div>                              
+                            </div>
+                            <div class="content-social">
+                                <p class="generic-content places-visit-content">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this.</p>
+                                <button class="tiny-blue-cta">see more</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="picture-location-description special-margin">
+                        <div class="picture-location-social">
+                            <div class="social-bar">
+                                <div class="social-bar-image">
+                                    <img src="/assets/garden.png" alt="women dressed in kimonos taking pictures under a Sakura tree in Ueno"> 
+                                    <div class="social-content flexing-flex">
+                                        <div class="city-social">
+                                            <p>Ueno</p>
+                                        </div>
+                                        <div class="social-items flexing-flex">
+                                            <p class="likes">221</p>
+                                            <img src="/assets/hearth.svg" alt="heart">
+                                            <p class="comments">50</p>
+                                            <img src="/assets/comments.svg" alt="comments">
+                                        </div>
+                                    </div>
+                                </div>                              
+                            </div>
+                            <div class="content-social">
+                                <p class="generic-content places-visit-content">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this.</p>
+                                <button class="tiny-blue-cta">see more</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="picture-location-description">
+                        <div class="picture-location-social">
+                            <div class="social-bar">
+                                <div class="social-bar-image">
+                                    <img src="/assets/city.png" alt="a busy back alley with restaurants in Shibuya"> 
+                                    <div class="social-content flexing-flex">
+                                        <div class="city-social">
+                                            <p>Shibuya</p>
+                                        </div>
+                                        <div class="social-items flexing-flex">
+                                            <p class="likes">221</p>
+                                            <img src="/assets/hearth.svg" alt="heart">
+                                            <p class="comments">50</p>
+                                            <img src="/assets/comments.svg" alt="comments">
+                                        </div>
+                                    </div>
+                                </div>                              
+                                </div>
+                            <div class="content-social">
+                                <p class="generic-content places-visit-content">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this.</p>
+                                <button class="tiny-blue-cta">see more</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>                                                                                                                                            
+            </div>
+        </div>
+    </div>
+    <div class="video-play translate" id="video">
+        <a href="#"><img class="play-icon" src="/assets/play.svg"></a>
+    </div>
+    <div class="footer translate">
+        <div class="footer-container">
+            <img class="footer-logo" src="/assets/odigo.svg">
+            <div class="footer-column">
+                <ul>
+                    <li class="footer-title">Company</li>
+                    <li class="footer-item"><a href="#">About</a></li>
+                    <li class="footer-item"><a href="#">Team</a></li>
+                    <li class="footer-item"><a href="#">Careers</a></li>
+                    <li class="footer-item"><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <ul>
+                    <li class="footer-title">Locations</li>
+                    <li class="footer-item"><a href="#">Tokyo</a></li>
+                    <li class="footer-item"><a href="#">Kyoto</a></li>
+                    <li class="footer-item"><a href="#">Osaka</a></li>
+                    <li class="footer-item"><a href="#">Hokkaido</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <ul>
+                    <li class="footer-title">Social Media</li>
+                    <li class="footer-item"><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+                    <li class="footer-item"><a href="https://www.twitter.com/" target="_blank">Twitter</a></li>
+                    <li class="footer-item"><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+                    <li class="footer-item"><a href="https://www.youtube.com/" target="_blank">Youtube</a></li>
+                </ul>
+            </div>
+        </div>    
     </div>
     <script src="./index.js"></script>
 </body>

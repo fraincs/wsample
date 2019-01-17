@@ -10,6 +10,7 @@ body {
     line-height: 24px;
     padding: 0;
     margin: 0;
+    -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -21,13 +22,22 @@ a {
     box-sizing: border-box;
 }
 
+button:focus,
+input:focus {
+    outline: none;
+}
+
+.flexing-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
 /* -------------------------------------------- */
                 /* HEADER CONTENT */
 /* -------------------------------------------- */
 
 .header {
     display: block;
-
 }
 
 .header-container {
@@ -45,7 +55,7 @@ a {
 }
 
 .header-container::before {
-    content: "";
+    content: '';
     position: absolute;
     background-color: rgba(0,0,0,0.4);
     top: 0;
@@ -64,8 +74,7 @@ a {
     position: relative;
     display: block;
     z-index: 30;
-    color: #FFFFFF;
-
+    color: #fff;
 }
 
 .top-menu {
@@ -73,11 +82,9 @@ a {
     display: flex;
     justify-content: flex-end;
     align-content: flex-end;
-
 }
 
 .menu-items {
-    /* margin-right: 41px; */
     margin-left: 82px;
 }
 
@@ -90,25 +97,29 @@ a {
 .head-content {
     position: relative;
     z-index: 30;
-    color: #FFFFFF;
+    color: #fff;
     padding-top: 189px;
     padding-right: 40%;
 }
 
 .super-title {
     font-size: 50px;
-    color: #FFFFFF;
+    color: #fff;
     line-height: 60px;
     padding-bottom: 32px;
 }
 
 .paragraph-style-white {
     font-size: 16px;
-    color: #FFFFFF;
+    color: #fff;
 }
 
 /* -------------- FORM -------------- */
 
+    .search-elements {
+        display: flex;
+    }
+    
     .form-field {
         margin-right: 41px;  /*le margin est reduit de 20px pour compenser le translate additionel de 20px, pour un total de 61px entre les field*/
         width: 297px;
@@ -116,23 +127,25 @@ a {
         background-color: transparent;
         border: none;
         border-bottom: 2px solid #D8D8D8; /*Ici la couleur du border est tres subtile et proche du blanc, est-ce qu'on voudrait accentuer la difference de couleur?*/
-        transform: translate(-20px);  
-        color: #FFFFFF;
-
+        transform: translate(-20px, -6px);  
+        color: #fff;
+        padding-left: 20px;
     }
 
     .form-field::placeholder {
-        color: #FFFFFF;
-        padding-left: 43px;
+        color: #fff;
     }
 
-    .circle:before {
+    .form-field:focus {
+        outline: none;
+    }
+
+    .input-wrapper:before {
         content: '\25E6';
         color: #D8D8D8;
         font-weight: 600;
         font-size: 40px;
-        /* transform: translate(30px);   */
-}
+    }
 
     .search-elements {
         position: relative;
@@ -144,15 +157,16 @@ a {
         height: 58px;
         width: 171px;
         text-transform: uppercase;
-        color: #FFFFFF;
+        color: #fff;
         background-color: #1B7DFF;
         border: none;
         font-size: 24px;
         font-weight: 600;
     }
 
-    .blue-cta:hover {
-        background-color: rgb(32, 112, 216);
+    .blue-cta:active {
+        background-color: #2070d8;
+        box-shadow: inset 0px 0px 10px #154e98;
     }
 
     /* -------------- END FORM -------------- */
@@ -167,7 +181,7 @@ a {
     margin-left: 89px;
     box-shadow: 3px 3px 40px 10px #1027460f;
     height: auto;
-    background-color: #FFFFFF;
+    background-color: #fff;
     z-index: 70;
 }
 
@@ -208,14 +222,16 @@ a {
 
 .single-benefit-content-subtitle {
     font-weight: 600;
-    font-size: 18px;
 }
 
-.single-benefit-content-subtitle-content {
+.generic-content {
+    font-size: 16px;
+}
+
+.benefit-content-container {
     padding-top: 34px;
     padding-bottom: 51px;
     padding-right: 19px;
-    font-size: 16px;
 }
 
 .white-cta { /*white CTA with blue font to reuse*/
@@ -235,12 +251,14 @@ a {
 /* -------------------------------------------- */
 
 .inspiration-section {
-    padding: 131px 88px 0 88px;
+    margin: 131px 88px 144px 88px;
 }
 
 .inspiration-subsection {
-    display: flex;
-    justify-content: space-between;
+    align-content: flex-end;
+    margin-bottom: 36px;
+}
+.inspiration-subsection blue-line {
     align-content: flex-end;
 }
 
@@ -261,6 +279,252 @@ a {
 }
 
 .photo-frame-first-line {
+    flex-wrap: wrap;
+}
+
+.photo-row {
+    max-height: 355px;
+    max-width: 645px;
+}
+
+.photo-row-line-one {
+    z-index: 30;
+    position: relative;
+}
+
+.photo-row-line-one::before {
+    content: '';
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #15182460;
+    background-blend-mode: multiply;
+    z-index: 50;
+    position: absolute;
+}
+
+.photo-row-content {
+    z-index: 70;
+    position: absolute;
+    bottom: 28px;
+    margin-left: 32px;
+    color: #fff;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.photo-frame-second-line {
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.photo-row-line-two {
+    position: relative;
+    z-index: 30;
+}
+
+.photo-row-line-two::before {
+    content: '';
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #15182460;
+    background-blend-mode: multiply;
+    z-index: 50;
+    position: absolute;
+}
+
+.photo-row2 {
+    max-height: 283px;
+    width: 414px;
+}
+
+/* -------------- LOCATION DESCRIPTIONS -------------- */
+
+    .location-description-container {
+        margin-top: 131px;
+    }
+
+    .location-description {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 78px;
+    }
+
+    .photo-location {
+        max-width: 597px;
+    }
+
+    .location-content {
+        padding: 37px 0 70px 111px;
+    }
+
+    .subheader-location {
+        color: #102746;
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 40px;
+    }
+
+    .blog-content-container {
+        padding: 70px 0;
+    }
+
+    .second-photo {
+        order: 2;
+    }
+
+    .second-content {
+        order: 1;
+        padding: 37px 111px 70px 0;
+    }
+
+    /* -------------- PLACES TO VISIT - SOCIAL -------------- */
+        .places-visit {
+            height: 1373px;
+            position: relative;
+        }
+
+        .picture-location-table {
+            display: flex;
+            justify-content: space-evenly;
+            margin-bottom: 58px;
+        }
+
+        .picture-location-description {
+            width: 392px;
+        }
+
+        .picture-location-description-column {
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+        }
+    
+        .sub-subtitle { /*styling to reuse for h3*/
+            font-weight: 400;
+            padding-bottom: 55px;
+            font-size: 35px;
+            color: #102746;
+        }
+
+        .social-bar-image {
+            z-index: 30;
+            position: relative;
+        }
+        .social-bar-image::before {
+            content: '';
+            top: 322px;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background-color: #15182460;
+            background-blend-mode: multiply;
+            z-index: 50;
+            position: absolute;
+            height: 55px;
+            max-width: 386px;
+        }
+        .social-content {
+            z-index: 70;
+            position: relative;
+            bottom: 40px;
+            margin-left: 27px;
+            color: #fff;
+        }
+
+        .social-items {
+            display: flex;
+            justify-content: space-between;
+            margin-right: 25px;
+            width: 100px;
+        }
+
+        .city-social {
+            text-transform: uppercase;
+        }
+
+        .special-margin {
+            margin-right: 57px;
+            margin-left: 57px;
+        }
+
+        .places-visit-content {
+            padding: 34px 0;
+        }
+
+        .tiny-blue-cta {
+            width: 118px;
+            height: 42px;
+            text-transform: uppercase;
+            color: #fff;
+            background-color: #1B7DFF;
+            border: none;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        .tiny-blue-cta:hover {
+            background-color: rgb(32, 112, 216);
+        }
+
+/* -------------------------------------------- */
+                /* VIDEO SECTION */
+/* -------------------------------------------- */
+
+.video-play {
+    position: relative;
+    background: url("/assets/video-play.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-play::before {
+    content: '';
+    position: absolute;
+    background-color: rgba(0,0,0,0.4);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+}
+
+.play-icon {
+    z-index: 40;
+    position: relative;
+}
+
+/* -------------------------------------------- */
+                /* FOOTER SECTION */
+/* -------------------------------------------- */
+
+.footer {
+    background-color: #102746;
+    color: #fff;
+    list-style: none;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 121px 165px 121px 165px;
+}
+
+.footer-logo {
+    height: 64px;
+    width: 170px;
+}
+
+.footer-title {
+    font-weight: 600;
 }
